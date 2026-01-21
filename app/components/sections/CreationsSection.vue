@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CreationCard from '@/components/cards/CreationCard.vue';
+
 const creations = [
   { title: 'Deep earth', desktop: '/images/desktop/image-deep-earth.jpg', mobile: '/images/mobile/image-deep-earth.jpg' },
   { title: 'Night arcade', desktop: '/images/desktop/image-night-arcade.jpg', mobile: '/images/mobile/image-night-arcade.jpg' },
@@ -15,20 +17,18 @@ const creations = [
   <section class="py-20 md:py-28">
     <div class="container">
       <div class="flex items-center justify-between gap-6">
-        <h2 class="font-[var(--font-heading)] uppercase text-3xl md:text-5xl">
+        <h2 class="text-[32px] leading-none uppercase font-heading md:text-5xl">
           Our creations
         </h2>
-
         <a
           href="#"
-          class="hidden md:inline-block border border-black px-10 py-3 uppercase tracking-[.25em]
+          class="hidden lg:inline-block border border-black text-sm leading-none py-3 px-10 uppercase tracking-[5px]
                  hover:bg-black hover:text-white transition"
         >
           See all
         </a>
       </div>
-
-      <div class="mt-12 grid gap-6 md:grid-cols-4">
+      <div class="grid gap-4 mt-12 lg:gap-6 md:grid-cols-4">
         <CreationCard
           v-for="item in creations"
           :key="item.title"
@@ -37,12 +37,10 @@ const creations = [
           :mobile="item.mobile"
         />
       </div>
-
-      <!-- кнопка для mobile (по макету она снизу) -->
-      <div class="mt-10 flex justify-center md:hidden">
+      <div class="flex justify-center mt-8 lg:hidden">
         <a
           href="#"
-          class="border border-black px-10 py-3 uppercase tracking-[.25em]
+          class="inline-block border border-black text-sm leading-none py-3 px-10 uppercase tracking-[5px]
                  hover:bg-black hover:text-white transition"
         >
           See all

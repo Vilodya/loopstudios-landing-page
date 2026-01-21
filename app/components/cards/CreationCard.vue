@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <a
     href="#"
-    class="group relative block h-32 overflow-hidden md:h-[450px]"
+    class="group relative block h-32 overflow-hidden md:h-[450px] md:max-w-64"
   >
     <div
       class="absolute inset-0 bg-cover bg-center
@@ -25,7 +25,7 @@ defineProps<{
 
     <p
       class="absolute bottom-5 left-5 right-5 text-white
-             font-[var(--font-heading)] uppercase text-2xl leading-tight
+             font-heaading uppercase text-2xl leading-tight
              group-hover:text-black transition md:bottom-10 md:left-10 md:right-10"
     >
       {{ title }}
