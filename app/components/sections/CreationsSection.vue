@@ -14,9 +14,9 @@ const creations = [
 </script>
 
 <template>
-  <section class="py-20 md:py-28">
-    <div class="container">
-      <div class="flex items-center justify-between gap-6">
+  <section class="pt-12 xl:pt-22.5 pb-24 md:pb-22 xl:pb-45">
+    <div class="page-container">
+      <div class="flex items-center justify-center lg:gap-6 lg:justify-between">
         <h2 class="text-[32px] leading-none uppercase font-heading md:text-5xl">
           Our creations
         </h2>
@@ -28,7 +28,7 @@ const creations = [
           See all
         </a>
       </div>
-      <div class="grid gap-4 mt-12 lg:gap-6 md:grid-cols-4">
+      <div class="grid gap-4 mt-12 md:mt-8 xl:mt-20 md:grid-cols-2 lg:gap-6 lg:grid-cols-4">
         <CreationCard
           v-for="item in creations"
           :key="item.title"
