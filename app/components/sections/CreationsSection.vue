@@ -1,16 +1,48 @@
 <script setup lang="ts">
-import CreationCard from '@/components/cards/CreationCard.vue';
+import CreationCard from "@/components/cards/CreationCard.vue";
 
 const creations = [
-  { title: 'Deep earth', desktop: '/images/desktop/image-deep-earth.jpg', mobile: '/images/mobile/image-deep-earth.jpg' },
-  { title: 'Night arcade', desktop: '/images/desktop/image-night-arcade.jpg', mobile: '/images/mobile/image-night-arcade.jpg' },
-  { title: 'Soccer team VR', desktop: '/images/desktop/image-soccer-team.jpg', mobile: '/images/mobile/image-soccer-team.jpg' },
-  { title: 'The grid', desktop: '/images/desktop/image-grid.jpg', mobile: '/images/mobile/image-grid.jpg' },
-  { title: 'From up above VR', desktop: '/images/desktop/image-from-above.jpg', mobile: '/images/mobile/image-from-above.jpg' },
-  { title: 'Pocket borealis', desktop: '/images/desktop/image-pocket-borealis.jpg', mobile: '/images/mobile/image-pocket-borealis.jpg' },
-  { title: 'The curiosity', desktop: '/images/desktop/image-curiosity.jpg', mobile: '/images/mobile/image-curiosity.jpg' },
-  { title: 'Make it fisheye', desktop: '/images/desktop/image-fisheye.jpg', mobile: '/images/mobile/image-fisheye.jpg' },
-]
+  {
+    title: ["DEEP", "EARTH"],
+    desktop: "/images/desktop/image-deep-earth.jpg",
+    mobile: "/images/mobile/image-deep-earth.jpg",
+  },
+  {
+    title: ["NIGHT", "ARCADE"],
+    desktop: "/images/desktop/image-night-arcade.jpg",
+    mobile: "/images/mobile/image-night-arcade.jpg",
+  },
+  {
+    title: ["SOCCER", "TEAM VR"],
+    desktop: "/images/desktop/image-soccer-team.jpg",
+    mobile: "/images/mobile/image-soccer-team.jpg",
+  },
+  {
+    title: ["THE", "GRID"],
+    desktop: "/images/desktop/image-grid.jpg",
+    mobile: "/images/mobile/image-grid.jpg",
+  },
+  {
+    title: ["FROM UP", "ABOVE VR"],
+    desktop: "/images/desktop/image-from-above.jpg",
+    mobile: "/images/mobile/image-from-above.jpg",
+  },
+  {
+    title: ["POCKET", "BOREALIS"],
+    desktop: "/images/desktop/image-pocket-borealis.jpg",
+    mobile: "/images/mobile/image-pocket-borealis.jpg",
+  },
+  {
+    title: ["THE", "CURIOSITY"],
+    desktop: "/images/desktop/image-curiosity.jpg",
+    mobile: "/images/mobile/image-curiosity.jpg",
+  },
+  {
+    title: ["MAKE IT", "FISHEYE"],
+    desktop: "/images/desktop/image-fisheye.jpg",
+    mobile: "/images/mobile/image-fisheye.jpg",
+  },
+];
 </script>
 
 <template>
@@ -22,16 +54,17 @@ const creations = [
         </h2>
         <a
           href="#"
-          class="hidden lg:inline-block border border-black text-sm leading-none py-3 px-10 uppercase tracking-[5px]
-                 hover:bg-black hover:text-white transition"
+          class="hidden lg:inline-block border border-black text-sm leading-none py-3 px-10 uppercase tracking-[5px] hover:bg-black hover:text-white transition"
         >
           See all
         </a>
       </div>
-      <div class="grid gap-4 mt-12 md:mt-8 xl:mt-20 md:grid-cols-2 lg:gap-6 lg:grid-cols-4">
+      <div
+        class="grid gap-4 mt-12 md:mt-8 xl:mt-20 md:grid-cols-2 lg:gap-6 lg:grid-cols-4"
+      >
         <CreationCard
           v-for="item in creations"
-          :key="item.title"
+          :key="item.title.join('-')"
           :title="item.title"
           :desktop="item.desktop"
           :mobile="item.mobile"
@@ -40,8 +73,7 @@ const creations = [
       <div class="flex justify-center mt-8 lg:hidden">
         <a
           href="#"
-          class="inline-block border border-black text-sm leading-none py-3 px-10 uppercase tracking-[5px]
-                 hover:bg-black hover:text-white transition"
+          class="inline-block border border-black text-sm leading-none py-3 px-10 uppercase tracking-[5px] hover:bg-black hover:text-white transition"
         >
           See all
         </a>
