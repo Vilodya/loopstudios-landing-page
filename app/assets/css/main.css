@@ -53,4 +53,41 @@
       padding: 0;
     }
   }
+
+  .footer-grid {
+    grid-template-areas:
+      "logo"
+      "nav"
+      "right";
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-areas:
+        "logo right"
+        "nav right";
+    }
+  }
+
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .link-underline:hover::after {
+    opacity: 1;
+  }
 }
