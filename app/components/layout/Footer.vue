@@ -1,4 +1,6 @@
 <script setup>
+import Navigation from "@/components/navigation/Navigation.vue";
+
 const socialLinks = [
   { label: "Facebook", icon: "/icons/icon-facebook.svg" },
   { label: "Twitter", icon: "/icons/icon-twitter.svg" },
@@ -18,15 +20,7 @@ const socialLinks = [
         >
           <img src="/images/logo.svg" alt="Logo" class="w-full" />
         </div>
-        <nav
-          class="[grid-area:nav] flex flex-col gap-4 lg:gap-8 font-sans text-[15px] leading-relaxed md:flex-row"
-        >
-          <a href="#" class="link-underline">About</a>
-          <a href="#" class="link-underline">Careers</a>
-          <a href="#" class="link-underline">Events</a>
-          <a href="#" class="link-underline">Products</a>
-          <a href="#" class="link-underline">Support</a>
-        </nav>
+        <Navigation class="[grid-area:nav]" />
         <div
           class="[grid-area:right] flex flex-col items-center gap-4 md:gap-6 md:items-end"
         >
